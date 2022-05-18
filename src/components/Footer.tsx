@@ -8,90 +8,70 @@ export const Footer = () => {
       <div className="container m-auto max-w-6xl">
         <div className="flex flex-wrap">
           <FooterSection
-            title="company"
+            title="empresa"
             items={[
               {
-                name: 'about us',
-                url: '#',
+                name: 'Quiénes somos',
+                url: '/aboutUs',
               },
               {
-                name: 'our services',
-                url: '#',
+                name: 'oficinas',
+                url: '/offices',
               },
               {
-                name: 'privacy policy',
-                url: '#',
-              },
-              {
-                name: 'affiliate program',
-                url: '#',
+                name: 'trabaja con nosotros',
+                url: 'workWithUs',
               },
             ]}
           />
           <FooterSection
-            title="get help"
+            title="ayuda"
             items={[
               {
                 name: 'FAQ',
-                url: '#',
+                url: '/questions',
               },
               {
-                name: 'shipping',
-                url: '#',
+                name: 'envío',
+                url: '/shipping',
               },
               {
-                name: 'returns',
-                url: '#',
-              },
-              {
-                name: 'order status',
-                url: '#',
-              },
-              {
-                name: 'payment options',
-                url: '#',
+                name: 'pago',
+                url: '/payment',
               },
             ]}
           />
           <FooterSection
-            title="online shop"
+            title="políticas"
             items={[
               {
-                name: 'watch',
+                name: 'políticas de privacidad',
                 url: '#',
               },
               {
-                name: 'bag',
-                url: '#',
-              },
-              {
-                name: 'shoes',
-                url: '#',
-              },
-              {
-                name: 'dress',
+                name: 'configuración de cookies',
                 url: '#',
               },
             ]}
           />
           <FooterSection
-            title="follow us"
+            title="síguenos"
             items={[
               {
                 name: 'instagram',
-                url: '#',
+                url: 'https://www.instagram.com/',
               },
               {
                 name: 'twitter',
-                url: '#',
+                url: 'https://twitter.com/?lang=es',
               },
               {
                 name: 'facebook',
-                url: '#',
+                url: 'https://es-es.facebook.com/',
               },
               {
                 name: 'pinterest',
-                url: '#',
+                url: 'https://www.pinterest.es/',
               },
             ]}
           />

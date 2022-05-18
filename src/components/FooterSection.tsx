@@ -15,7 +15,7 @@ export const FooterSection = (props: IFooterSectionProps) => {
       <ul>
         {props.items.map((item, index) => (
           <li key={`section-${props.title}-item-${index}`}>
-            <a className="text-black hover:pl-2" href={item.url}>
+            <a className="text-black hover:pl-2 hover:text-black" href={item.url}>
               {item.name}
             </a>
           </li>
