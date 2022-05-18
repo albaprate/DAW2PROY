@@ -25,3 +25,9 @@ export interface ICartProduct {
   productKey: IProduct['key'];
   productPrice: IProduct['price'];
 }
+
+export interface IPayment {
+  key: number;
+  name: string;
+  image: string;
+}

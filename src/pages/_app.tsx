@@ -6,7 +6,9 @@ import { MainContext } from '@/contexts/MainContexts';
 import '../styles/global.css';
 import 'antd/dist/antd.css';
 import { ProductsData } from '@/data/products';
+import { PayMethodsData } from '@/data/payMethods';
 import { ICartProduct } from '@/types';
+
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [cart, setCart] = useState<ICartProduct[]>([]);
@@ -62,6 +64,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       value={{
         products: ProductsData,
         cart,
+        payMethods: PayMethodsData,
         addProductToCart,
         removeProductCart,
         updateProductCartAmount,

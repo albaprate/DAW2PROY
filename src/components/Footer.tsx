@@ -20,7 +20,7 @@ export const Footer = () => {
               },
               {
                 name: 'trabaja con nosotros',
-                url: 'workWithUs',
+                url: '/workWithUs',
               },
             ]}
           />
@@ -41,20 +41,7 @@ export const Footer = () => {
               },
             ]}
           />
-          <FooterSection
-            title="políticas"
-            items={[
-              {
-                name: 'políticas de privacidad',
-                url: '#',
-              },
-              {
-                name: 'configuración de cookies',
-                url: '#',
-              },
-            ]}
-          />
-          <FooterSection
+           <FooterSection
             title="síguenos"
             items={[
               {
@@ -75,6 +62,20 @@ export const Footer = () => {
               },
             ]}
           />
+          <FooterSection
+            title="políticas"
+            items={[
+              {
+                name: 'políticas de privacidad',
+                url: '#',
+              },
+              {
+                name: 'configuración de cookies',
+                url: '#',
+              },
+            ]}
+          />
+         
         </div>
       </div>
     </footer>

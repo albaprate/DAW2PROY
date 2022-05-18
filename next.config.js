@@ -15,6 +15,6 @@ module.exports = withBundleAnalyzer({
   // You can remove `basePath` if you don't need it.
   reactStrictMode: true,
   images: {
-    domains: ['mcprod.jacquemus.com', 'static.zara.net'],
+    domains: ['mcprod.jacquemus.com', 'static.zara.net','pngimg.com', 'cdn.iconscout.com','i.pinimg.com', 'res.cloudinary.com'],
   },
 });

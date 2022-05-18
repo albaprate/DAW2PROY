@@ -4,7 +4,7 @@ import Layout from '@/templates/Layout';
 const shipping = () => {
   return (
    <Layout>
-       <div className='w-1/4 m-auto'>
+       <div className='w-1/4 m-auto mb-8'>
             <p className='text-xl uppercase'>MÉTODOS DE ENVÍO Y COSTE</p>
             <p>Las opciones de envío pueden variar en función de la dirección de entrega, la hora de tu compra y la disponibilidad de los artículos.</p>
             <p>En el momento de procesar tu compra, te mostraremos los métodos de envío disponibles, el coste y la fecha de entrega de tu pedido.</p>
