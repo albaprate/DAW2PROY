@@ -18,6 +18,12 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap"
             rel="stylesheet"
           />
+          <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Koulen&display=swap" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet"></link>
+          <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"></link>
+          <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet"></link>
         </Head>
         <body className="font-jost">
           <Main />

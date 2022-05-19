@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 
 import { MainContext } from '@/contexts/MainContexts';
 import Layout from '@/templates/Layout';
-import { IColor, IProduct } from '@/types';
+import { IColor, IProduct, IDesigner } from '@/types';
 
 const { Option } = Select;
 
@@ -17,11 +17,28 @@ const ProductDetails = () => {
 
   const [selectedColor, setSelectedColor] = useState<IColor>();
   const [selectedSize, setSelectedSize] = useState();
+  //const designers = <IDesigner>[]
+ /*  const designers = values.designers.map((designer) => {
+    return designer.products
+
+  }) */
+
 
   // Get product information
+ // let product: object = {}
+
+
+/*   {values.designers.map((designer) => {
+     let product = useMemo<IProduct | undefined>(() => {
+      return designer.products.find((prod) => prod.key === Number(id));
+    }, [designer.products, id]); 
+  })} */
+
+  
   const product = useMemo<IProduct | undefined>(() => {
     return values.products.find((prod) => prod.key === Number(id));
-  }, [values.products, id]);
+  }, [values.products, id]); 
+  
 
   const colors = useMemo(() => {
     if (product) {

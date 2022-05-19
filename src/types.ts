@@ -1,3 +1,10 @@
+export interface IDesigner {
+  key: number;
+  name: string;
+  products: IProduct[];
+}
+
+
 export interface IProduct {
   key: number;
   name: string;

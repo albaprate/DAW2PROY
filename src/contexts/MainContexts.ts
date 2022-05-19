@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { ICartProduct, IProduct , IPayment} from '@/types';
+import { ICartProduct, IProduct , IPayment, IDesigner} from '@/types';
 
 interface IMainContext {
+  designers: IDesigner[];
   products: IProduct[];
   cart: ICartProduct[];
   payMethods: IPayment[];
@@ -12,6 +13,7 @@ interface IMainContext {
 }
 
 export const MainContext = React.createContext<IMainContext>({
+  designers: [],
   products: [],
   cart: [],
   payMethods: [],

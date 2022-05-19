@@ -8,6 +8,7 @@ import 'antd/dist/antd.css';
 import { ProductsData } from '@/data/products';
 import { PayMethodsData } from '@/data/payMethods';
 import { ICartProduct } from '@/types';
+import { DesignersData } from '@/data/designers';
 
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
@@ -62,6 +63,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <MainContext.Provider
       value={{
+        designers: DesignersData,
         products: ProductsData,
         cart,
         payMethods: PayMethodsData,

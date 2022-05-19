@@ -80,6 +80,12 @@ module.exports = {
     fontFamily: {
       jost: ['Jost', 'sans-serif'],
       dmserif: ['"DM Serif Text"', 'serif'],
+      Koulen: ['Koulen', 'cursive'],
+      tapestry: ['Tapestry', 'cursive'],
+      lexend: ['Lexend', 'sans-serif'],
+      viga: ['Viga', 'sans-serif'],
+      shrik: ['Shrikhand', 'cursive'],
+      allerta: ['"Allerta Stencil"', 'sans-serif']
     },
   },
   plugins: [],
