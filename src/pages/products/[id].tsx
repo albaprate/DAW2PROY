@@ -17,6 +17,7 @@ const ProductDetails = () => {
 
   const [selectedColor, setSelectedColor] = useState<IColor>();
   const [selectedSize, setSelectedSize] = useState();
+  const [selectedImage, setSelectecImage] = useState();
   //const designers = <IDesigner>[]
  /*  const designers = values.designers.map((designer) => {
     return designer.products
@@ -37,7 +38,7 @@ const ProductDetails = () => {
   
   const product = useMemo<IProduct | undefined>(() => {
     return values.products.find((prod) => prod.key === Number(id));
-  }, [values.products, id]); 
+  }, [values.products, id]);  
   
 
   const colors = useMemo(() => {
@@ -58,12 +59,20 @@ const ProductDetails = () => {
     return [];
   }, [product, selectedColor]);
 
-  const productImages = useMemo<string>(() => {
+  const productImage = useMemo<string>(() => {
     if (product) {
       return product.variations[0]?.images[0] || '';
     }
     return '';
   }, [product]);
+
+
+  /* const productImages = {
+      return product.variations[0]?.images[0] || [];
+  }
+  console.log(productImages) */
+  
+
 
   const afegirProducteALaCistella = useCallback(
     (productToAdd: IProduct, color?: IColor, size?: string) => {
@@ -87,12 +96,12 @@ const ProductDetails = () => {
   return (
     <Layout>
       <div className="flex flex-row">
-        <div className="flex w-2/4 flex-col">
+        <div className="flex w-2/4 flex-col scroll-smooth">
           <div id="image-carousel" className="">
             <Image
               key={product.key}
               alt=""
-              src={productImages || ''}
+              src={productImage || ''}
               layout="responsive"
               width="500"
               height="600"
@@ -103,7 +112,7 @@ const ProductDetails = () => {
             <Image
               key={product.key}
               alt=""
-              src={productImages || ''}
+              src={'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221pa025-1021_320_6.jpg' || ''}
               layout="responsive"
               width="100"
               height="100"
@@ -112,7 +121,7 @@ const ProductDetails = () => {
             <Image
               key={product.key}
               alt=""
-              src={productImages || ''}
+              src={'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221dr024-1026_5ac_6a.jpg' || ''}
               layout="responsive"
               width="100"
               height="100"

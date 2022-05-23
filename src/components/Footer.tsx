@@ -67,11 +67,11 @@ export const Footer = () => {
             items={[
               {
                 name: 'políticas de privacidad',
-                url: '#',
+                url: '/privacyPolicy',
               },
               {
                 name: 'configuración de cookies',
-                url: '#',
+                url: '/cookies',
               },
             ]}
           />

@@ -476,7 +476,7 @@ export const DesignersData: IDesigner[] =
     name: "tory burch",
     products: [
       {
-        key: 1,
+        key: 10,
         name: 'sudadera',
         price: 350,
         salePrice: null,
@@ -556,7 +556,7 @@ export const DesignersData: IDesigner[] =
         ],
       },
       {
-        key: 2,
+        key: 11,
         name: 'bolso bambino',
         price: 750,
         salePrice: null,
@@ -604,7 +604,7 @@ export const DesignersData: IDesigner[] =
         ],
       },
       {
-        key: 3,
+        key: 12,
         name: 'top cruzado',
         price: 300,
         salePrice: null,
@@ -652,7 +652,7 @@ export const DesignersData: IDesigner[] =
         ],
       },
       {
-        key: 4,
+        key: 13,
         name: 'sudadera',
         price: 350,
         salePrice: null,
@@ -700,7 +700,7 @@ export const DesignersData: IDesigner[] =
         ],
       },
       {
-        key: 5,
+        key: 14,
         name: 'bolso bambino',
         price: 750,
         salePrice: null,
@@ -748,7 +748,7 @@ export const DesignersData: IDesigner[] =
         ],
       },
       {
-        key: 6,
+        key: 15,
         name: 'top cruzado',
         price: 300,
         salePrice: null,
@@ -796,7 +796,7 @@ export const DesignersData: IDesigner[] =
         ],
       },
       {
-        key: 7,
+        key: 16,
         name: 'sudadera',
         price: 350,
         salePrice: null,
@@ -844,7 +844,7 @@ export const DesignersData: IDesigner[] =
         ],
       },
       {
-        key: 8,
+        key: 17,
         name: 'falda mini tapetas',
         price: 25,
         salePrice: null,
@@ -892,7 +892,7 @@ export const DesignersData: IDesigner[] =
         ],
       },
       {
-        key: 9,
+        key: 18,
         name: 'falda tiro alto',
         price: 29,
         salePrice: null,
