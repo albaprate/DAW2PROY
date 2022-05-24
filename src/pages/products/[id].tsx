@@ -3,6 +3,7 @@ import { useCallback, useContext, useMemo, useState } from 'react';
 import { Button, Select } from 'antd';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import ColorButton from '@/components/colorButton';
 
 import { MainContext } from '@/contexts/MainContexts';
 import Layout from '@/templates/Layout';
@@ -17,7 +18,6 @@ const ProductDetails = () => {
 
   const [selectedColor, setSelectedColor] = useState<IColor>();
   const [selectedSize, setSelectedSize] = useState();
-  const [selectedImage, setSelectecImage] = useState('');
   
   const product = useMemo<IProduct | undefined>(() => {
     return values.products.find((prod) => prod.key === Number(id));
@@ -32,11 +32,9 @@ const ProductDetails = () => {
   const colors = useMemo(() => {
     if (product) {
       const preColors = new Array<IColor>();
-    
       product.variations.forEach((variation) => 
       {
-       if(!preColors.find(colorObj => colorObj.code === variation.color.code)){
-        console.log(preColors)
+       if(!preColors.find(colorObj => colorObj.name === variation.color.name)){
         preColors.push(variation.color)
        }
        
@@ -63,7 +61,18 @@ const ProductDetails = () => {
       return product.variations[0]?.images[0] || '';
     }
     return '';
-  }, [product]);
+  }, [product]); 
+
+/* 
+  useEffect(() => {
+    console.log("antes", colors)
+   colors.forEach(color => {
+     if (color.name !== selectedColor?.name){
+       color.active = false;
+     }
+   })
+   console.log("despues", colors)
+  }, [selectedColor]); */
   
 
   const addProductToCart = useCallback(
@@ -84,13 +93,14 @@ const ProductDetails = () => {
   if (!product) {
     return <p>Product not found</p>;
   }
-  console.log(selectedColor);
+
 
   return (
     <Layout>
       <div className="flex flex-row w-3/4 m-auto">
-        <div className="flex w-2/4 flex-col scroll-smooth">
+        <div className="flex w-2/4 flex-col">
           <div id="image-carousel" className="">
+          
             <Image
               key={product.key}
               alt=""
@@ -101,7 +111,7 @@ const ProductDetails = () => {
               className="object-cover duration-300  hover:opacity-50 "
             />
           </div>
-          <div className="w-1/6 bg-slate-200">
+          {/* <div className="w-1/6 bg-slate-200">
             <Image
               key={product.key}
               alt=""
@@ -119,16 +129,23 @@ const ProductDetails = () => {
               width="100"
               height="100"
               className="object-cover duration-300  hover:opacity-50 "
-            />
-          </div>
+            /> 
+          </div> */}
         </div>
 
-        <div id="product-information" className="flex w-2/4 flex-col pl-8">
+        <div id="product-information" className="flex w-2/4 flex-col pl-8 mt-3">
           <h1 className='text-xl uppercase'>{product.name}</h1>
           <p>{`${product.price}€`}</p>
-          <div className="flex flex-row mb-6">
+          <div className="flex flex-col">
+            <p className='mb-2 mt-4'>{selectedColor?.name}</p>
             {colors.map((color) => (
-              <div
+              <ColorButton
+                color = {color}
+                product = {product}
+                setSelectedColor = {setSelectedColor}
+                colors = {colors}
+              />
+             /*  <div
                 onClick={() => {
                   setSelectedColor(color);
                 }}
@@ -136,6 +153,7 @@ const ProductDetails = () => {
                 className={`mr-1 rounded-full ${
                   selectedColor ? 'border border-black' : ''
                 } p-0.5`}
+                
               >
                 <div
                   className={`w-3 h-3 rounded-full `}
@@ -143,8 +161,9 @@ const ProductDetails = () => {
                     backgroundColor: `${color.code}`,
                   }}
                 />
-              </div>
+              </div> */
             ))}
+            
           </div>
       
           <Select
@@ -156,11 +175,13 @@ const ProductDetails = () => {
             value={selectedSize}
           >
             {sizes.map((size) => (
+              
               <Option key={`product-${product.key}-size-${size}`} value={size}>
                 {size}
               </Option>
             ))}
           </Select>
+          
           <Button
           className='mt-8'
             type="primary"

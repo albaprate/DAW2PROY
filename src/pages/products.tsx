@@ -13,7 +13,7 @@ const Products = () => {
       {values.designers.map((designer) => {
         return (
           <div key={designer.key}  className="mb-40">
-            <div className='w-1/4 flex justify-center mb-0 border-t-2  border-black'>
+            <div className='flex justify-center mb-0 border-t-2  border-black'>
             <p className='text-center uppercase mb-0 lg:my-2 lg:text-base font-lexend text-2xl text-black'>{designer.name}</p>
             </div>
              

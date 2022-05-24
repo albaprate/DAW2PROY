@@ -23,6 +23,7 @@ export interface IProductVariation {
 export interface IColor {
   name: string;
   code: string;
+  active: boolean;
 }
 
 export interface ICartProduct {
