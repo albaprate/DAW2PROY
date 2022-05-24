@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 
 import { MainContext } from '@/contexts/MainContexts';
 import Layout from '@/templates/Layout';
-import { IColor, IProduct, IDesigner } from '@/types';
+import { IColor, IProduct } from '@/types';
 
 const { Option } = Select;
 
@@ -17,47 +17,46 @@ const ProductDetails = () => {
 
   const [selectedColor, setSelectedColor] = useState<IColor>();
   const [selectedSize, setSelectedSize] = useState();
-  const [selectedImage, setSelectecImage] = useState();
-  //const designers = <IDesigner>[]
- /*  const designers = values.designers.map((designer) => {
-    return designer.products
-
-  }) */
-
-
-  // Get product information
- // let product: object = {}
-
-
-/*   {values.designers.map((designer) => {
-     let product = useMemo<IProduct | undefined>(() => {
-      return designer.products.find((prod) => prod.key === Number(id));
-    }, [designer.products, id]); 
-  })} */
-
+  const [selectedImage, setSelectecImage] = useState('');
   
   const product = useMemo<IProduct | undefined>(() => {
     return values.products.find((prod) => prod.key === Number(id));
   }, [values.products, id]);  
   
-
+ /*  const colorExist = (colorCode:string, preColors:Array<IColor>) => {
+    return preColors.find(colorObject => {
+      colorObject.code === colorCode
+    });
+    
+  } */ 
   const colors = useMemo(() => {
     if (product) {
-      const preColors = new Set<IColor>();
-      product.variations.forEach((variation) => preColors.add(variation.color));
-      return Array.from(preColors);
+      const preColors = new Array<IColor>();
+    
+      product.variations.forEach((variation) => 
+      {
+       if(!preColors.find(colorObj => colorObj.code === variation.color.code)){
+        console.log(preColors)
+        preColors.push(variation.color)
+       }
+       
+      }); 
+      return(preColors);
     }
     return [];
   }, [product]);
 
   const sizes = useMemo(() => {
     if (product && selectedColor) {
+      console.log(selectedColor);
       return product.variations
-        .filter((variation) => variation.color === selectedColor)
+        .filter((variation) => variation.color.name === selectedColor.name)
         .map((variation) => variation.size);
     }
+    
     return [];
   }, [product, selectedColor]);
+
 
   const productImage = useMemo<string>(() => {
     if (product) {
@@ -65,16 +64,9 @@ const ProductDetails = () => {
     }
     return '';
   }, [product]);
-
-
-  /* const productImages = {
-      return product.variations[0]?.images[0] || [];
-  }
-  console.log(productImages) */
   
 
-
-  const afegirProducteALaCistella = useCallback(
+  const addProductToCart = useCallback(
     (productToAdd: IProduct, color?: IColor, size?: string) => {
       if (color && size) {
         values.addProductToCart({
@@ -92,10 +84,11 @@ const ProductDetails = () => {
   if (!product) {
     return <p>Product not found</p>;
   }
+  console.log(selectedColor);
 
   return (
     <Layout>
-      <div className="flex flex-row">
+      <div className="flex flex-row w-3/4 m-auto">
         <div className="flex w-2/4 flex-col scroll-smooth">
           <div id="image-carousel" className="">
             <Image
@@ -108,7 +101,7 @@ const ProductDetails = () => {
               className="object-cover duration-300  hover:opacity-50 "
             />
           </div>
-          <div className=" w-1/6 bg-slate-200">
+          <div className="w-1/6 bg-slate-200">
             <Image
               key={product.key}
               alt=""
@@ -130,10 +123,10 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        <div id="product-information" className="flex  w-2/4 flex-col">
-          <h1>{product.name}</h1>
-          <p>{product.price}</p>
-          <div className="flex flex-row">
+        <div id="product-information" className="flex w-2/4 flex-col pl-8">
+          <h1 className='text-xl uppercase'>{product.name}</h1>
+          <p>{`${product.price}€`}</p>
+          <div className="flex flex-row mb-6">
             {colors.map((color) => (
               <div
                 onClick={() => {
@@ -142,10 +135,10 @@ const ProductDetails = () => {
                 key={`product-${product.key}-color-${color.name}`}
                 className={`mr-1 rounded-full ${
                   selectedColor ? 'border border-black' : ''
-                } p-1`}
+                } p-0.5`}
               >
                 <div
-                  className={`w-5 h-5 rounded-full `}
+                  className={`w-3 h-3 rounded-full `}
                   style={{
                     backgroundColor: `${color.code}`,
                   }}
@@ -153,25 +146,10 @@ const ProductDetails = () => {
               </div>
             ))}
           </div>
-          {/* <Select
-            style={{ width: 120 }}
-            onChange={(value) => {
-              setSelectedColor(value);
-              setSelectedSize(undefined);
-            }}
-            value={selectedColor}
-          >
-            {colors.map((color) => (
-              <Option
-                key={`product-${product.key}-color-${color}`}
-                value={color}
-              >
-                {color}
-              </Option>
-            ))}
-          </Select> */}
+      
           <Select
-            style={{ width: 120 }}
+          className='mt-4'
+            style={{ width: 70 }}
             onChange={(value) => {
               setSelectedSize(value);
             }}
@@ -184,13 +162,14 @@ const ProductDetails = () => {
             ))}
           </Select>
           <Button
+          className='mt-8'
             type="primary"
             disabled={!selectedColor || !selectedSize}
             onClick={() => {
-              afegirProducteALaCistella(product, selectedColor, selectedSize);
+              addProductToCart(product, selectedColor, selectedSize);
             }}
           >
-            Afegir a la cistella
+            Comprar
           </Button>
         </div>
       </div>
