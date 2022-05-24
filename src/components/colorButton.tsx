@@ -1,6 +1,6 @@
 import React from 'react';
 
-/* const ColorButton = ({color, product, setSelectedColor, colors}) => {
+const ColorButton = ({color, product, setSelectedColor, colors}) => {
     //const [activeColor, setActiveColor] = useState(false);
     console.log(color);
   return (
@@ -33,5 +33,5 @@ import React from 'react';
     
   );
 }
- */
+
 export default ColorButton;
