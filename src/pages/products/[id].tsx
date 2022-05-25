@@ -111,26 +111,6 @@ const ProductDetails = () => {
               className="object-cover duration-300  hover:opacity-50 "
             />
           </div>
-          {/* <div className="w-1/6 bg-slate-200">
-            <Image
-              key={product.key}
-              alt=""
-              src={'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221pa025-1021_320_6.jpg' || ''}
-              layout="responsive"
-              width="100"
-              height="100"
-              className="object-cover duration-300  hover:opacity-50 "
-            />
-            <Image
-              key={product.key}
-              alt=""
-              src={'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221dr024-1026_5ac_6a.jpg' || ''}
-              layout="responsive"
-              width="100"
-              height="100"
-              className="object-cover duration-300  hover:opacity-50 "
-            /> 
-          </div> */}
         </div>
 
         <div id="product-information" className="flex w-2/4 flex-col pl-8 mt-3">

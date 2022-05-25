@@ -20,6 +20,7 @@ export const Cesta = () => {
   );
   return (
     <Layout>
+      {openModal && <ModalOrder setOpenModal={setOpenModal} />} 
       <div className="m-auto flex w-3/6 flex-col py-6 px-3 text-xs lg:w-7/12 md:w-full sm:w-full xs:w-full">
         <h3 className="mb-4 items-center text-base uppercase">
           Productos de la compra
@@ -40,7 +41,7 @@ export const Cesta = () => {
           <button
             className="mt-6 mb-3 w-full bg-black  py-3 text-white"
             onClick={() => {
-              // setOpenModal(true);
+              setOpenModal(true);
             }}
           >
             Comprar
@@ -70,7 +71,7 @@ export const Cesta = () => {
           );
         })}
       </div>
-       {openModal && <ModalOrder setOpenModal={setOpenModal} />} 
+       
     </Layout>
   );
 };
