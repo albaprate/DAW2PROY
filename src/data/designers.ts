@@ -53,7 +53,7 @@ export const DesignersData: IDesigner[] =
           },
           {
             key: 1,
-            color: { name: 'BLAU', code: 'blue' , active: false},
+            color: { name: 'blue', code: 'blue' , active: false},
             size: 'XS',
             images: [
               'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221co012-1014_510_6a.jpg',
@@ -61,7 +61,7 @@ export const DesignersData: IDesigner[] =
           },
           {
             key: 2,
-            color: { name: 'BLAU', code: 'blue' , active: false},
+            color: { name: 'blue', code: 'blue' , active: false},
             size: 'S',
             images: [
               'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221co012-1014_510_6a.jpg',
@@ -69,7 +69,7 @@ export const DesignersData: IDesigner[] =
           },
           {
             key: 3,
-            color: { name: 'BLAU', code: 'blue' , active: false},
+            color: { name: 'blue', code: 'blue' , active: false},
             size: 'M',
             images: [
               'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221co012-1014_510_6a.jpg',
@@ -77,7 +77,7 @@ export const DesignersData: IDesigner[] =
           },
           {
             key: 4,
-            color: { name: 'BLAU', code: 'blue' , active: false},
+            color: { name: 'blue', code: 'blue' , active: false},
             size: 'L',
             images: [
               'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221co012-1014_510_6a.jpg',

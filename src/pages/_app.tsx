@@ -31,7 +31,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   const addProductToCart = useCallback(
     (productToAdd: ICartProduct) => {
       const product = cart.find(
-        (cartProduct) => cartProduct.productKey === productToAdd.productKey
+        (cartProduct) => cartProduct.productKey === productToAdd.productKey && cartProduct.color === productToAdd.color && cartProduct.size === productToAdd.size
       );
       if (product) {
         product.amount += productToAdd.amount;

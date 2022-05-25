@@ -49,7 +49,7 @@ export const ProductsData: IProduct[] = [
       },
       {
         key: 1,
-        color: { name: 'BLAU', code: 'blue' , active: false},
+        color: { name: 'blue', code: 'blue' , active: false},
         size: 'XS',
         images: [
           'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221co012-1014_510_6a.jpg',
@@ -57,7 +57,7 @@ export const ProductsData: IProduct[] = [
       },
       {
         key: 2,
-        color: { name: 'BLAU', code: 'blue' , active: false},
+        color: { name: 'blue', code: 'blue' , active: false},
         size: 'S',
         images: [
           'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221co012-1014_510_6a.jpg',
@@ -65,7 +65,7 @@ export const ProductsData: IProduct[] = [
       },
       {
         key: 3,
-        color: { name: 'BLAU', code: 'blue' , active: false},
+        color: { name: 'blue', code: 'blue' , active: false},
         size: 'M',
         images: [
           'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221co012-1014_510_6a.jpg',
@@ -73,7 +73,7 @@ export const ProductsData: IProduct[] = [
       },
       {
         key: 4,
-        color: { name: 'BLAU', code: 'blue' , active: false},
+        color: { name: 'blue', code: 'blue' , active: false},
         size: 'L',
         images: [
           'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221co012-1014_510_6a.jpg',
@@ -1393,389 +1393,254 @@ export const ProductsData: IProduct[] = [
       },
     ],
   },
-  /*
+
   {
-    key: 11,
-    name: 'vestido de popelín rayado',
-    price: 2065,
+    key: 22,
+    name: 'top palmi',
+    price: 390,
     salePrice: null,
     variations: [
       {
         key: 1,
-        color: { name: 'coffe', code: 'rgb(202 138 4)', active:false },
+        color: { name: 'amber', code: 'rgb(253 230 138)', active:false },
         size: 'XS',
         images: [
-          'https://www.toryburch.com/en-eu/clothing/dresses/coffee-stripe-poplin-dress/135593.html?color=230',
+          'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221to020-1021_750_6a.jpg',
         ],
       },
       {
         key: 2,
-        color: { name: 'coffe', code: 'rgb(202 138 4)', active:false },
+        color: { name: 'amber', code: 'rgb(253 230 138)', active:false },
         size: 'S',
         images: [
-          'https://www.toryburch.com/en-eu/clothing/dresses/coffee-stripe-poplin-dress/135593.html?color=230',
+          'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221to020-1021_750_6a.jpg',
         ],
       },
       {
         key: 3,
-        color: { name: 'coffe', code: 'rgb(202 138 4)', active:false },
+        color: { name: 'amber', code: 'rgb(253 230 138)', active:false },
         size: 'M',
         images: [
-          'https://www.toryburch.com/en-eu/clothing/dresses/coffee-stripe-poplin-dress/135593.html?color=230',
+          'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221to020-1021_750_6a.jpg',
         ],
       },
       {
         key: 4,
-        color: { name: 'coffe', code: 'rgb(202 138 4)', active:false },
+        color: { name: 'amber', code: 'rgb(253 230 138)', active:false },
         size: 'L',
         images: [
-          'https://www.toryburch.com/en-eu/clothing/dresses/coffee-stripe-poplin-dress/135593.html?color=230',
+          'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221to020-1021_750_6a.jpg',
         ],
       },
       {
         key: 5,
-        color: { name: 'coffe', code: 'rgb(202 138 4)', active:false },
+        color: { name: 'amber', code: 'rgb(253 230 138)', active:false },
         size: 'XL',
         images: [
-          'https://www.toryburch.com/en-eu/clothing/dresses/coffee-stripe-poplin-dress/135593.html?color=230' 
-        ],
-      },
-    ],
-  },
-  {
-    key: 12,
-    name: 'vestido mini con smock',
-    price: 455,
-    salePrice: null,
-    variations: [
-      {
-        key: 1,
-        color: { name: 'mustard', code: 'rgb(202 138 4)', active:false },
-        size: 'XS',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-mini-dress/139435.html?color=720',
-        ],
-      },
-      {
-        key: 2,
-        color: { name: 'mustard', code: 'rgb(202 138 4)', active:false },
-        size: 'S',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-mini-dress/139435.html?color=720',
-        ],
-      },
-      {
-        key: 3,
-        color: { name: 'mustard', code: 'rgb(202 138 4)', active:false },
-        size: 'M',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-mini-dress/139435.html?color=720',
-        ],
-      },
-      {
-        key: 4,
-        color: { name: 'mustard', code: 'rgb(202 138 4)', active:false },
-        size: 'L',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-mini-dress/139435.html?color=720',
-        ],
-      },
-      {
-        key: 5,
-        color: { name: 'mustard', code: 'rgb(202 138 4)', active:false },
-        size: 'XL',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-mini-dress/139435.html?color=720' 
-        ],
-      },
-    ],
-  },
-  {
-    key: 13,
-    name: 'camisa playera',
-    price: 455,
-    salePrice: null,
-    variations: [
-      {
-        key: 1,
-        color: { name: 'orange', code: 'rgb(253 186 116)', active:false },
-        size: 'XS',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/beach-shirt/139514.html?color=703',
-        ],
-      },
-      {
-        key: 2,
-        color: { name: 'orange', code: 'rgb(253 186 116)', active:false },
-        size: 'S',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/beach-shirt/139514.html?color=703',
-        ],
-      },
-      {
-        key: 3,
-        color: { name: 'orange', code: 'rgb(253 186 116)', active:false },
-        size: 'M',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/beach-shirt/139514.html?color=703',
-        ],
-      },
-      {
-        key: 4,
-        color: { name: 'orange', code: 'rgb(253 186 116)', active:false },
-        size: 'L',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/beach-shirt/139514.html?color=703',
-        ],
-      },
-      {
-        key: 5,
-        color: { name: 'orange', code: 'rgb(253 186 116)', active:false },
-        size: 'XL',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/beach-shirt/139514.html?color=703' 
-        ],
-      },
-    ],
-  },
-  {
-    key: 14,
-    name: 'vestido plisado',
-    price: 800,
-    salePrice: null,
-    variations: [
-      {
-        key: 1,
-        color: { name: 'yellow', code: 'rgb(254 240 138)', active:false },
-        size: 'XS',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/pleated-dress/136708.html?color=710',
-        ],
-      },
-      {
-        key: 2,
-        color: { name: 'yellow', code: 'rgb(254 240 138)', active:false },
-        size: 'S',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/pleated-dress/136708.html?color=710',
-        ],
-      },
-      {
-        key: 3,
-        color: { name: 'yellow', code: 'rgb(254 240 138)', active:false },
-        size: 'M',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/pleated-dress/136708.html?color=710',
-        ],
-      },
-      {
-        key: 4,
-        color: { name: 'yellow', code: 'rgb(254 240 138)', active:false },
-        size: 'L',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/pleated-dress/136708.html?color=710',
-        ],
-      },
-      {
-        key: 5,
-        color: { name: 'yellow', code: 'rgb(254 240 138)', active:false },
-        size: 'XL',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/pleated-dress/136708.html?color=710' 
+          'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221to020-1021_750_6a.jpg',
         ],
       },
       {
         key: 6,
-        color: { name: 'cyan', code: 'rgb(8 145 178)', active:false },
+        color: { name: 'blue', code: 'rgb(191 219 254)', active:false },
         size: 'XS',
         images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/pleated-dress/136708.html?color=710' 
+          'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221to020-1021_750_6a.jpg',
         ],
       },
       {
         key: 7,
-        color: { name: 'cyan', code: 'rgb(8 145 178)', active:false },
+        color: { name: 'blue', code: 'rgb(191 219 254)', active:false },
         size: 'S',
         images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/pleated-dress/136708.html?color=710' 
+          'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221to020-1021_750_6a.jpg',
         ],
       },
       {
         key: 8,
-        color: { name: 'cyan', code: 'rgb(8 145 178)', active:false },
+        color: { name: 'blue', code: 'rgb(191 219 254)', active:false },
         size: 'M',
         images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/pleated-dress/136708.html?color=710' 
+          'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221to020-1021_750_6a.jpg',
         ],
       },
       {
         key: 9,
-        color: { name: 'cyan', code: 'rgb(8 145 178)', active:false },
+        color: { name: 'blue', code: 'rgb(191 219 254)', active:false },
         size: 'L',
         images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/pleated-dress/136708.html?color=710' 
+          'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221to020-1021_750_6a.jpg',
         ],
       },
-    ],
+      {
+        key: 10,
+        color: { name: 'blue', code: 'rgb(191 219 254)', active:false },
+        size: 'XL',
+        images: [
+          'https://mcprod.jacquemus.com/media/staempfli_imageresizer/cache/catalog/product/2/2/660x_co_ar_tr_95/22e221to020-1021_750_6a.jpg',
+        ],
+      },
+    ]
   },
   {
-    key: 15,
-    name: 'vestido smock fornitura',
-    price: 800,
+    key: 23,
+    name: '',
+    price: 0,
     salePrice: null,
     variations: [
       {
         key: 1,
-        color: { name: 'grey', code: 'rgb(115 115 115)', active:false },
+        color: { name: 'beige', code: 'rgb(255 237 213)', active:false },
         size: 'XS',
         images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-dress/138373.html?color=960',
+          '',
         ],
       },
-      {
-        key: 2,
-        color: { name: 'grey', code: 'rgb(115 115 115)', active:false },
-        size: 'S',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-dress/138373.html?color=960',
-        ],
-      },
-      {
-        key: 3,
-        color: { name: 'grey', code: 'rgb(115 115 115)', active:false },
-        size: 'M',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-dress/138373.html?color=960',
-        ],
-      },
-      {
-        key: 4,
-        color: { name: 'grey', code: 'rgb(115 115 115)', active:false },
-        size: 'L',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-dress/138373.html?color=960',
-        ],
-      },
-      {
-        key: 5,
-        color: { name: 'grey', code: 'rgb(115 115 115)', active:false },
-        size: 'XL',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-dress/138373.html?color=960' 
-        ],
-      },
-      {
-        key: 6,
-        color: { name: 'orange', code: 'rgb(234 88 12)', active:false },
-        size: 'XS',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-dress/138373.html?color=960' 
-        ],
-      },
-      {
-        key: 7,
-        color: { name: 'orange', code: 'rgb(234 88 12)', active:false },
-        size: 'S',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-dress/138373.html?color=960' 
-        ],
-      },
-      {
-        key: 8,
-        color: { name: 'orange', code: 'rgb(234 88 12)', active:false },
-        size: 'M',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-dress/138373.html?color=960' 
-        ],
-      },
-      {
-        key: 9,
-        color: { name: 'orange', code: 'rgb(234 88 12)', active:false },
-        size: 'L',
-        images: [
-          'https://www.toryburch.com/en-eu/swim/coverups/smocked-dress/138373.html?color=960' 
-        ],
-      },
-    ],
+    ]
   },
   {
-    key: 15,
-    name: 'anorak bloque color',
-    price: 800,
+    key: 24,
+    name: '',
+    price: 0,
     salePrice: null,
     variations: [
       {
         key: 1,
-        color: { name: 'salmon', code: 'rgb(252 165 165)', active:false },
+        color: { name: 'beige', code: 'rgb(255 237 213)', active:false },
         size: 'XS',
         images: [
-          'https://www.toryburch.com/en-eu/clothing/jackets/color-block-nylon-half-zip-anorak/116229.html?color=216',
+          '',
         ],
       },
+    ]
+  },
+  {
+    key: 25,
+    name: '',
+    price: 0,
+    salePrice: null,
+    variations: [
       {
-        key: 2,
-        color: { name: 'salmon', code: 'rgb(252 165 165)', active:false },
-        size: 'S',
-        images: [
-          'https://www.toryburch.com/en-eu/clothing/jackets/color-block-nylon-half-zip-anorak/116229.html?color=216',
-        ],
-      },
-      {
-        key: 3,
-        color: { name: 'salmon', code: 'rgb(252 165 165)', active:false },
-        size: 'M',
-        images: [
-          'https://www.toryburch.com/en-eu/clothing/jackets/color-block-nylon-half-zip-anorak/116229.html?color=216',
-        ],
-      },
-      {
-        key: 4,
-        color: { name: 'salmon', code: 'rgb(252 165 165)', active:false },
-        size: 'L',
-        images: [
-          'https://www.toryburch.com/en-eu/clothing/jackets/color-block-nylon-half-zip-anorak/116229.html?color=216',
-        ],
-      },
-      {
-        key: 5,
-        color: { name: 'salmon', code: 'rgb(252 165 165)', active:false },
-        size: 'XL',
-        images: [
-          'https://www.toryburch.com/en-eu/clothing/jackets/color-block-nylon-half-zip-anorak/116229.html?color=216' 
-        ],
-      },
-      {
-        key: 6,
-        color: { name: 'orange', code: 'rgb(234 88 12)', active:false },
+        key: 1,
+        color: { name: 'beige', code: 'rgb(255 237 213)', active:false },
         size: 'XS',
         images: [
-          'https://www.toryburch.com/en-eu/clothing/jackets/color-block-nylon-half-zip-anorak/116229.html?color=216' 
+          '',
         ],
       },
+    ]
+  },
+  {
+    key: 26,
+    name: '',
+    price: 0,
+    salePrice: null,
+    variations: [
       {
-        key: 7,
-        color: { name: 'orange', code: 'rgb(234 88 12)', active:false },
-        size: 'S',
+        key: 1,
+        color: { name: 'beige', code: 'rgb(255 237 213)', active:false },
+        size: 'XS',
         images: [
-          'https://www.toryburch.com/en-eu/clothing/jackets/color-block-nylon-half-zip-anorak/116229.html?color=216' 
+          '',
         ],
       },
+    ]
+  },
+  {
+    key: 27,
+    name: '',
+    price: 0,
+    salePrice: null,
+    variations: [
       {
-        key: 8,
-        color: { name: 'orange', code: 'rgb(234 88 12)', active:false },
-        size: 'M',
+        key: 1,
+        color: { name: 'beige', code: 'rgb(255 237 213)', active:false },
+        size: 'XS',
         images: [
-          'https://www.toryburch.com/en-eu/clothing/jackets/color-block-nylon-half-zip-anorak/116229.html?color=216' 
+          '',
         ],
       },
+    ]
+  },
+  {
+    key: 28,
+    name: '',
+    price: 0,
+    salePrice: null,
+    variations: [
       {
-        key: 9,
-        color: { name: 'orange', code: 'rgb(234 88 12)', active:false },
-        size: 'L',
+        key: 1,
+        color: { name: 'beige', code: 'rgb(255 237 213)', active:false },
+        size: 'XS',
         images: [
-          'https://www.toryburch.com/en-eu/clothing/jackets/color-block-nylon-half-zip-anorak/116229.html?color=216' 
+          '',
         ],
       },
-    ],
-  }, */
+    ]
+  },
+  {
+    key: 29,
+    name: '',
+    price: 0,
+    salePrice: null,
+    variations: [
+      {
+        key: 1,
+        color: { name: 'beige', code: 'rgb(255 237 213)', active:false },
+        size: 'XS',
+        images: [
+          '',
+        ],
+      },
+    ]
+  },
+  {
+    key: 30,
+    name: '',
+    price: 0,
+    salePrice: null,
+    variations: [
+      {
+        key: 1,
+        color: { name: 'beige', code: 'rgb(255 237 213)', active:false },
+        size: 'XS',
+        images: [
+          '',
+        ],
+      },
+    ]
+  },
+  {
+    key: 31,
+    name: '',
+    price: 0,
+    salePrice: null,
+    variations: [
+      {
+        key: 1,
+        color: { name: 'beige', code: 'rgb(255 237 213)', active:false },
+        size: 'XS',
+        images: [
+          '',
+        ],
+      },
+    ]
+  },
+  {
+    key: 32,
+    name: '',
+    price: 0,
+    salePrice: null,
+    variations: [
+      {
+        key: 1,
+        color: { name: 'beige', code: 'rgb(255 237 213)', active:false },
+        size: 'XS',
+        images: [
+          '',
+        ],
+      },
+    ]
+  }
+  
 ];

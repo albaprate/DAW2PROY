@@ -1,13 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 import ProductToCart from '@/components/productToCart';
 import { MainContext } from '@/contexts/MainContexts';
 import Layout from '@/templates/Layout';
+import ModalOrder from '@/components/ModalOrder';
 
 export const Cesta = () => {
   const values = useContext(MainContext);
   console.log(values);
-  // const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const total = values.cart.reduce(
     (prev, cartProduct) => prev + cartProduct.amount * cartProduct.productPrice,
@@ -69,7 +70,7 @@ export const Cesta = () => {
           );
         })}
       </div>
-      {/*  {openModal && <ModalOrder setOpenModal={setOpenModal} />} */}
+       {openModal && <ModalOrder setOpenModal={setOpenModal} />} 
     </Layout>
   );
 };
