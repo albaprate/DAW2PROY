@@ -19,7 +19,7 @@ export const Header = () => {
           <li className="mr-6">{/* <button type="button">Menu</button> */}</li>
           <li className="mr-6">
             <Link href="/">
-              <a className="font-lexend text-4xl text-black">Fa-m</a>
+              <a className="font-lexend text-4xl text-black hover:text-green-300">Fa-m</a>
             </Link>
           </li>
         </ul>

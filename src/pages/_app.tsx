@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { AppProps } from 'next/app';
 
@@ -60,12 +60,18 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     [cart]
   );
 
+  const removeCart = () => {
+    setCart([]);
+  }
+
+
   return (
     <MainContext.Provider
       value={{
         designers: DesignersData,
         products: ProductsData,
         cart,
+        removeCart,
         payMethods: PayMethodsData,
         addProductToCart,
         removeProductCart,

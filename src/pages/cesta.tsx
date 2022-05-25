@@ -20,7 +20,8 @@ export const Cesta = () => {
   );
   return (
     <Layout>
-      {openModal && <ModalOrder setOpenModal={setOpenModal} />} 
+      {openModal && <ModalOrder setOpenModal={setOpenModal}/>} 
+  
       <div className="m-auto flex w-3/6 flex-col py-6 px-3 text-xs lg:w-7/12 md:w-full sm:w-full xs:w-full">
         <h3 className="mb-4 items-center text-base uppercase">
           Productos de la compra
@@ -38,13 +39,16 @@ export const Cesta = () => {
             <p className="uppercase tracking-wide">total</p>
             <p className="tracking-wide">{`${total} EUR`}</p>
           </div>
+
           <button
             className="mt-6 mb-3 w-full bg-black  py-3 text-white"
             onClick={() => {
-              setOpenModal(true);
+              if (values.cart.length !== 0){
+                setOpenModal(true);
+              }  
             }}
           >
-            Comprar
+            {values.cart.length !== 0 ? 'Comprar' : 'Añade productos para comprar'}
           </button>
         </div>
         {values.cart.map((cartProduct) => {

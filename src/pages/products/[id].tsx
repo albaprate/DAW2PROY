@@ -110,7 +110,7 @@ const ProductDetails = () => {
               height="600"
               className="object-cover duration-300  hover:opacity-50 "
             />
-          </div>
+          </div>©
         </div>
 
         <div id="product-information" className="flex w-2/4 flex-col pl-8 mt-3">
