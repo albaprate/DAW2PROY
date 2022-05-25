@@ -21,12 +21,12 @@ const Index = () => {
     <Layout>
       <div className="relative w-full">
         <div className="absolute top-0 left-0 z-30 flex h-full w-full flex-col items-center justify-center">
-          <div className="text-6xl font-bold text-white">bla bla bla</div>
-          <div className="text-2xl text-white">bla bla bla</div>
+          <div className="text-5xl font-bold text-white uppercase font-viga text-center">descubre <br></br>nuevos talentos</div>
+          <div className="text-3xl text-white uppercase">encuentra prendas únicas</div>
         </div>
         <img
-          className="m-auto my-7 h-1/6 w-1/4"
-          src={`${router.basePath}/00-story-workout-sneakers.jpg`}
+          className="m-auto my-7 h-2/6 w-2/4"
+          src={`${router.basePath}/plisado.jpg`}
           alt=""
         />
       </div>
