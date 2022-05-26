@@ -4,6 +4,7 @@ import ProductToCart from '@/components/productToCart';
 import { MainContext } from '@/contexts/MainContexts';
 import Layout from '@/templates/Layout';
 import ModalOrder from '@/components/ModalOrder';
+import { Button } from 'antd';
 
 export const Cesta = () => {
   const values = useContext(MainContext);
@@ -40,16 +41,22 @@ export const Cesta = () => {
             <p className="tracking-wide">{`${total} EUR`}</p>
           </div>
 
-          <button
-            className="mt-6 mb-3 w-full bg-black  py-3 text-white"
-            onClick={() => {
-              if (values.cart.length !== 0){
-                setOpenModal(true);
-              }  
-            }}
-          >
-            {values.cart.length !== 0 ? 'Comprar' : 'Añade productos para comprar'}
-          </button>
+          <div className='flex m-auto justify-center'>
+            <Button
+            className='mt-8 sm:h-4 px-4 mb-8'
+              type="primary"
+              disabled={values.cart.length === 0}
+              onClick={() => {
+                if (values.cart.length !== 0){
+                  setOpenModal(true);
+                }  
+              }}
+            >
+              {values.cart.length !== 0 ? 'Comprar' : 'Añade productos'}
+            </Button> 
+          
+          </div>
+         
         </div>
         {values.cart.map((cartProduct) => {
           const product = values.products.find(
@@ -63,7 +70,8 @@ export const Cesta = () => {
               key={product.key}
               image={product.variations[0]?.images[0] || ''}
               name={product.name}
-              color={cartProduct.color.name}
+              colorName={cartProduct.color.name}
+              color={cartProduct.color.code}
               size={cartProduct.size}
               units={cartProduct.amount}
               price={product.price}

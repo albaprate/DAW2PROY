@@ -19,14 +19,14 @@ export const Header = () => {
           <li className="mr-6">{/* <button type="button">Menu</button> */}</li>
           <li className="mr-6">
             <Link href="/">
-              <a className="font-lexend text-4xl text-black hover:text-green-300">Fa-m</a>
+              <a className="font-lexend text-4xl text-black hover:text-green-300 sm:text-xl">Fa-m</a>
             </Link>
           </li>
         </ul>
       </div>
 
       <div className="flex items-start">
-        <ul className="flex flex-wrap text-sm">
+        <ul className="flex flex-wrap text-sm sm:text-xs">
           <HeaderItem url="/products" name="diseñadores" />
           {/*   <HeaderItem url="/sesioninit" name="iniciar sesión" /> */}
           <Link href="/cesta">

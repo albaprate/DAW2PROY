@@ -12,10 +12,12 @@ const ModalOrder = ({setOpenModal}) => {
   }, 3000); */
 
   return (
-    <div className="m-auto h-2/5 text-center border ">
-      Tu compra ha sido procesada correctamente
+    <div className="m-auto h-3/5 justify-center  align-middle border border-black flex">
+     <p className='p-0 mr-3 text-base sm:text-xs'>Tu compra ha sido procesada correctamente</p> 
+     
       <Link href="/">
       <CloseOutlined
+        className='mt-1'
         onClick={() => {
           setOpenModal(false);
           values.removeCart()

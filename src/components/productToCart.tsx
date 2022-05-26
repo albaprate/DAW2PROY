@@ -9,6 +9,7 @@ interface IProductToCart {
   image: string;
   alt?: string;
   name: string;
+  colorName?: string;
   color?: string;
   size?: string;
   units: number;
@@ -30,11 +31,21 @@ const ProductToCart = (props: IProductToCart) => {
           height="150"
         />
       </div>
-      <div className=" flex w-5/6 flex-col justify-between pl-5 pt-6">
+      <div className=" flex w-5/6 flex-col justify-between pl-5 pt-6 sm:pt-0">
         <div className="flex justify-between">
-          <div>
+          <div className=''>
             <h3>{props.name}</h3>
-            <h5 className="text-xs">{props.color}</h5>
+            <div className='flex align-middle'>
+            <div
+              className={`w-3 h-3 rounded-full`}
+              style={{
+                backgroundColor: `${props.color}`,
+              }}
+            ></div>
+           {/*  <h5 className="text-xs ml-1">{props.colorName}</h5> */}
+           
+            </div>
+           
           </div>
 
           <div>

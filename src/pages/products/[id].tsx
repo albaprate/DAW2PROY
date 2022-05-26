@@ -22,13 +22,7 @@ const ProductDetails = () => {
   const product = useMemo<IProduct | undefined>(() => {
     return values.products.find((prod) => prod.key === Number(id));
   }, [values.products, id]);  
-  
- /*  const colorExist = (colorCode:string, preColors:Array<IColor>) => {
-    return preColors.find(colorObject => {
-      colorObject.code === colorCode
-    });
-    
-  } */ 
+
   const colors = useMemo(() => {
     if (product) {
       const preColors = new Array<IColor>();
@@ -55,25 +49,12 @@ const ProductDetails = () => {
     return [];
   }, [product, selectedColor]);
 
-
   const productImage = useMemo<string>(() => {
     if (product) {
       return product.variations[0]?.images[0] || '';
     }
     return '';
   }, [product]); 
-
-/* 
-  useEffect(() => {
-    console.log("antes", colors)
-   colors.forEach(color => {
-     if (color.name !== selectedColor?.name){
-       color.active = false;
-     }
-   })
-   console.log("despues", colors)
-  }, [selectedColor]); */
-  
 
   const addProductToCart = useCallback(
     (productToAdd: IProduct, color?: IColor, size?: string) => {
@@ -94,7 +75,6 @@ const ProductDetails = () => {
     return <p>Product not found</p>;
   }
 
-
   return (
     <Layout>
       <div className="flex flex-row w-3/4 m-auto">
@@ -110,14 +90,15 @@ const ProductDetails = () => {
               height="600"
               className="object-cover duration-300  hover:opacity-50 "
             />
-          </div>©
+          </div>
         </div>
 
-        <div id="product-information" className="flex w-2/4 flex-col pl-8 mt-3">
-          <h1 className='text-xl uppercase'>{product.name}</h1>
-          <p>{`${product.price}€`}</p>
+        <div id="product-information" className="flex w-2/4 flex-col pl-8 mt-3 sm:mt-1">
+          <h1 className='text-xl uppercase sm:text-xs sm:mb-2'>{product.name}</h1>
+          <p className='sm:text-xs sm:mb-0'>{`${product.price}€`}</p>
           <div className="flex flex-col">
-            <p className='mb-2 mt-4'>{selectedColor?.name}</p>
+            <p className='mb-2 mt-4 sm:my-0'>{selectedColor?.name}</p>
+            <div className='flex flex-row'>
             {colors.map((color) => (
               <ColorButton
                 color = {color}
@@ -125,29 +106,16 @@ const ProductDetails = () => {
                 setSelectedColor = {setSelectedColor}
                 colors = {colors}
               />
-             /*  <div
-                onClick={() => {
-                  setSelectedColor(color);
-                }}
-                key={`product-${product.key}-color-${color.name}`}
-                className={`mr-1 rounded-full ${
-                  selectedColor ? 'border border-black' : ''
-                } p-0.5`}
-                
-              >
-                <div
-                  className={`w-3 h-3 rounded-full `}
-                  style={{
-                    backgroundColor: `${color.code}`,
-                  }}
-                />
-              </div> */
-            ))}
+              ))}
+            </div>
+           
+            
+           
             
           </div>
       
           <Select
-          className='mt-4'
+          className='mt-4 sm:h-4'
             style={{ width: 70 }}
             onChange={(value) => {
               setSelectedSize(value);
@@ -163,7 +131,7 @@ const ProductDetails = () => {
           </Select>
           
           <Button
-          className='mt-8'
+          className='mt-8 sm:h-4'
             type="primary"
             disabled={!selectedColor || !selectedSize}
             onClick={() => {
