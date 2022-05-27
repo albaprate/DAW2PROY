@@ -17,7 +17,7 @@ const ProductDetails = () => {
   const values = useContext(MainContext);
 
   const [selectedColor, setSelectedColor] = useState<IColor>();
-  const [selectedSize, setSelectedSize] = useState();
+  const [selectedSize, setSelectedSize] = useState('');
   
   const product = useMemo<IProduct | undefined>(() => {
     return values.products.find((prod) => prod.key === Number(id));
@@ -133,6 +133,9 @@ const ProductDetails = () => {
             disabled={!selectedColor || !selectedSize}
             onClick={() => {
               addProductToCart(product, selectedColor, selectedSize);
+              selectedColor?.active = false;
+              setSelectedColor({name: '', code: '', active: false});
+              setSelectedSize('');
             }}
           >
             Comprar
