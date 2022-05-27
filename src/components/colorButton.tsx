@@ -1,9 +1,9 @@
 import React from 'react';
-import { IColor, IProduct } from '@/types';
+import { IColor} from '@/types';
 interface IColorButtonProps {
   color: IColor,
-  product: IProduct[],
-  setSelectedColor: () => void;
+  productKey: number,
+  setSelectedColor: (color: IColor) => void;
   colors: IColor[]
 }
 
@@ -21,7 +21,7 @@ const ColorButton = (props: IColorButtonProps) => {
             })
         }}
 
-        key={`product-${props.product.keys}-color-${props.color.name}`}
+        key={`product-${props.productKey}-color-${props.color.name}`}
         className={`mr-1 my-2 rounded-full ${
         props.color.active === true ? 'border border-black' : ''
         } p-0.5`}
