@@ -94,25 +94,22 @@ const ProductDetails = () => {
         </div>
 
         <div id="product-information" className="flex w-2/4 flex-col pl-8 mt-3 sm:mt-1">
-          <h1 className='text-xl uppercase sm:text-xs sm:mb-2'>{product.name}</h1>
-          <p className='sm:text-xs sm:mb-0'>{`${product.price}€`}</p>
-          <div className="flex flex-col">
-            <p className='mb-2 mt-4 sm:my-0'>{selectedColor?.name}</p>
+            <h1 className='text-xl uppercase sm:text-xs sm:mb-2'>{product.name}</h1>
+            <p className='sm:text-xs sm:mb-0'>{`${product.price}€`}</p>
+            <p className='mb-0 mt-4 sm:my-0'>{selectedColor?.name}</p> 
             <div className='flex flex-row'>
             {colors.map((color) => (
-              <ColorButton
-                color = {color}
-                product = {product}
-                setSelectedColor = {setSelectedColor}
-                colors = {colors}
-              />
+                <ColorButton
+                  color = {color}
+                  product = {product}
+                  setSelectedColor = {setSelectedColor}
+                  colors = {colors}
+                /> 
+             
               ))}
             </div>
-           
-            
-           
-            
-          </div>
+        
+
       
           <Select
           className='mt-4 sm:h-4'
