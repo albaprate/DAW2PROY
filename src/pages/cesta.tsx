@@ -75,7 +75,7 @@ export const Cesta = () => {
               size={cartProduct.size}
               units={cartProduct.amount}
               price={product.price}
-              onClick={() => values.removeProductCart(product.key)}
+              onClick={() => values.removeProductCart(product.key, cartProduct.color, cartProduct.size)}
               onAmountUpdate={(newAmount) =>
                 values.updateProductCartAmount(product.key, newAmount)
               }
