@@ -1,0 +1,9 @@
+version: "3"
+services:
+  finalProject:
+    restart: unless-stopped
+    build: ./
+    image: "finalProy"
+    ports:
+      - "3000:3000"
+    
