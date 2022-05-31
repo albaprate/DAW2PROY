@@ -3,7 +3,7 @@ services:
   finalproy:
     restart: unless-stopped
     build: ./
-    image: "finalProy"
+    image: "project"
     ports:
       - "3000:3000"
     
