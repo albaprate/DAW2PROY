@@ -74,7 +74,7 @@ const ProductToCart = (props: IProductToCart) => {
               />
             </p>
           </div>
-          <div>{props.price}</div>
+          <div>{}{`${props.price} EUR`}</div>
         </div>
       </div>
     </div>

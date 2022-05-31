@@ -17,4 +17,27 @@ module.exports = withBundleAnalyzer({
   images: {
     domains: ['mcprod.jacquemus.com', 'static.zara.net','pngimg.com', 'cdn.iconscout.com','i.pinimg.com', 'res.cloudinary.com', 's7.toryburch.com'],
   },
+
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      '/': { page: '/' },
+      '/aboutUs': { page: '/aboutUs' },
+      '/cesta': { page: '/cesta' },
+      '/cookies': { page: '/cookies' },
+      '/offices': { page: '/offices' },
+      '/payment': { page: '/payment' },
+      '/privacyPolicy': { page: '/privacyPolicy' },
+      '/products': { page: '/products' },
+      '/questions': { page: '/questions' },
+      '/register': { page: '/register' },
+      '/sesioninit': { page: '/sesionint' },
+      '/shipping': { page: '/shipping' },
+      '/workWithUs': { page: '/workWithUs' },
+      
+    }
+  },
+
 });

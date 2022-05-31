@@ -101,7 +101,7 @@ const ProductDetails = () => {
             {colors.map((color) => (
                 <ColorButton
                   color = {color}
-                  product = {product}
+                  productKey = {product.key}
                   setSelectedColor = {setSelectedColor}
                   colors = {colors}
                 /> 
@@ -133,7 +133,9 @@ const ProductDetails = () => {
             disabled={!selectedColor || !selectedSize}
             onClick={() => {
               addProductToCart(product, selectedColor, selectedSize);
-              selectedColor?.active = false;
+              if (selectedColor != undefined) {
+                selectedColor.active = false;
+              }
               setSelectedColor({name: '', code: '', active: false});
               setSelectedSize('');
             }}

@@ -10,7 +10,7 @@ interface IMainContext {
   payMethods: IPayment[];
   addProductToCart: (product: ICartProduct) => void;
   updateProductCartAmount: (productKey: number, newAmount: number) => void;
-  removeProductCart: (key: number) => void;
+  removeProductCart: (key: number, color:object, size:string) => void;
 }
 
 export const MainContext = React.createContext<IMainContext>({

@@ -51,9 +51,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   );
 
   const removeProductCart = useCallback(
-    (key: number) => {
+    (key: number, color:object, size:string) => {
       const productIWant = cart.filter(
-        (cartProduct) => cartProduct.productKey !== key
+        (cartProduct) => cartProduct.productKey !== key || cartProduct.color !== color || cartProduct.size !== size
       );
       setCart(productIWant);
     },

@@ -3,8 +3,11 @@ import { MainContext } from '@/contexts/MainContexts';
 import Link from 'next/link';
 import { CloseOutlined } from '@ant-design/icons';
 
+interface IModal {
+  setOpenModal: (color: boolean) => void;
+}
 
-const ModalOrder = ({setOpenModal}) => {
+const ModalOrder = (props: IModal) => {
   const values = useContext(MainContext); 
   // { setOpenModal }
  /*  setTimeout(() => {
@@ -19,7 +22,7 @@ const ModalOrder = ({setOpenModal}) => {
       <CloseOutlined
         className='mt-1'
         onClick={() => {
-          setOpenModal(false);
+          props.setOpenModal(false);
           values.removeCart()
         }}
            
